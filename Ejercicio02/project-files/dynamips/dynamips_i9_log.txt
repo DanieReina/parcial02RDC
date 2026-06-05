@@ -1,0 +1,55 @@
+Jun 05 09:50:02.248 HYPERVISOR: Release 0.2.14-x86/Windows (tag 2014092320)
+Jun 05 09:50:02.252 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 49753.
+Jun 05 09:50:02.294 HYPERVISOR: exec_cmd: hypervisor version 
+Jun 05 09:50:02.296 HYPERVISOR: exec_cmd: hypervisor uuid 
+Jun 05 09:50:02.297 HYPERVISOR: exec_cmd: hypervisor working_dir C:/Users/daniv/Desktop/parcial02RDC/Ejercicio02\project-files\dynamips 
+Jun 05 09:50:02.339 GENERAL: working_dir=C:/Users/daniv/Desktop/parcial02RDC/Ejercicio02\project-files\dynamips
+Jun 05 09:50:02.341 HYPERVISOR: exec_cmd: vm create R4 4 c3725 
+Jun 05 09:50:02.346 VM: VM R4 created.
+Jun 05 09:50:02.367 HYPERVISOR: exec_cmd: vm set_con_tcp_port R4 2004 
+Jun 05 09:50:02.389 HYPERVISOR: exec_cmd: c3725 get_mac_addr R4 
+Jun 05 09:50:02.392 HYPERVISOR: exec_cmd: vm get_status R4 
+Jun 05 09:50:02.394 HYPERVISOR: exec_cmd: vm slot_add_binding R4 1 0 NM-4T 
+Jun 05 09:50:02.396 HYPERVISOR: exec_cmd: vm set_ios R4 C:\Users\daniv\GNS3\images\IOS\c3725-adventerprisek9-mz.124-15.T14.image 
+Jun 05 09:50:02.403 HYPERVISOR: exec_cmd: vm set_disk0 R4 0 
+Jun 05 09:50:02.406 HYPERVISOR: exec_cmd: c3725 set_mac_addr R4 c204.1788.0000 
+Jun 05 09:50:02.410 HYPERVISOR: exec_cmd: vm set_nvram R4 256 
+Jun 05 09:50:02.413 HYPERVISOR: exec_cmd: vm set_exec_area R4 64 
+Jun 05 09:50:02.415 HYPERVISOR: exec_cmd: vm get_status R4 
+Jun 05 09:50:02.418 HYPERVISOR: exec_cmd: vm set_idle_pc R4 0x60c09aa0 
+Jun 05 09:50:02.422 HYPERVISOR: exec_cmd: vm set_config R4 configs/i4_startup-config.cfg 
+Jun 05 09:50:02.436 HYPERVISOR: exec_cmd: vm create Ghost 0 c3725 
+Jun 05 09:50:02.442 VM: VM Ghost created.
+Jun 05 09:50:02.444 HYPERVISOR: exec_cmd: vm set_ios Ghost C:\Users\daniv\GNS3\images\IOS\c3725-adventerprisek9-mz.124-15.T14.image 
+Jun 05 09:50:02.446 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Jun 05 09:50:02.447 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost c3725-adventerprisek9-mz.124-15.T14.image-128.ghost 
+Jun 05 09:50:02.447 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Jun 05 09:50:02.448 HYPERVISOR: exec_cmd: vm start Ghost 
+Jun 05 09:50:02.922 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Jun 05 09:50:02.922 HYPERVISOR: exec_cmd: vm stop Ghost 
+Jun 05 09:50:03.171 VM: VM Ghost shutdown.
+Jun 05 09:50:03.172 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Jun 05 09:50:03.172 VM: VM Ghost destroyed.
+Jun 05 09:50:03.205 HYPERVISOR: exec_cmd: vm set_ghost_status R4 2 
+Jun 05 09:50:03.206 HYPERVISOR: exec_cmd: vm set_ghost_file R4 c3725-adventerprisek9-mz.124-15.T14.image-128.ghost 
+Jun 05 09:50:03.379 HYPERVISOR: exec_cmd: nio create_udp udp-139283b5-6df4-4b56-9fb9-3e2dc6357596 10000 127.0.0.1 10001 
+Jun 05 09:50:03.459 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R4 0 0 udp-139283b5-6df4-4b56-9fb9-3e2dc6357596 
+Jun 05 09:50:03.468 HYPERVISOR: exec_cmd: vm get_status R4 
+Jun 05 09:50:03.627 HYPERVISOR: exec_cmd: nio create_udp udp-00aa8173-95d6-47ab-bf70-63bf207d3569 10003 127.0.0.1 10002 
+Jun 05 09:50:03.639 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R4 1 1 udp-00aa8173-95d6-47ab-bf70-63bf207d3569 
+Jun 05 09:50:03.650 HYPERVISOR: exec_cmd: vm get_status R4 
+Jun 05 09:50:03.757 HYPERVISOR: exec_cmd: nio create_udp udp-ca19a87c-ea64-444a-9619-52c8a2d152a7 10008 127.0.0.1 10009 
+Jun 05 09:50:03.829 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R4 1 2 udp-ca19a87c-ea64-444a-9619-52c8a2d152a7 
+Jun 05 09:50:03.835 HYPERVISOR: exec_cmd: vm get_status R4 
+Jun 05 09:50:06.362 HYPERVISOR: exec_cmd: vm get_status R4 
+Jun 05 09:50:06.366 HYPERVISOR: exec_cmd: vm start R4 
+Jun 05 09:52:08.286 HYPERVISOR: exec_cmd: vm get_status R4 
+Jun 05 09:52:08.288 HYPERVISOR: exec_cmd: vm stop R4 
+Jun 05 09:52:08.500 VM: VM R4 shutdown.
+Jun 05 09:52:09.825 HYPERVISOR: exec_cmd: vm get_status R4 
+Jun 05 09:52:09.832 HYPERVISOR: exec_cmd: vm extract_config R4 
+Jun 05 09:52:09.872 HYPERVISOR: exec_cmd: vm delete R4 
+Jun 05 09:52:09.872 VM: VM R4 destroyed.
+Jun 05 09:52:09.879 HYPERVISOR: exec_cmd: hypervisor stop 
+Jun 05 09:52:09.993 HYPERVISOR: Stopped.
+Jun 05 09:52:09.993 GENERAL: reset done.
